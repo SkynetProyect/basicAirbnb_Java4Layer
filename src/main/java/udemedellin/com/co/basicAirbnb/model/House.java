@@ -14,5 +14,5 @@ public class House {
     private Integer idNeighborhood;
     private String address;
     private float price;
-    private byte image;
+    private byte[] image = new byte[0];
 }
