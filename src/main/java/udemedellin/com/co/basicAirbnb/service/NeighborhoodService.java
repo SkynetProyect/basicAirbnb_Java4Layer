@@ -7,6 +7,7 @@ import udemedellin.com.co.basicAirbnb.repository.NeighborhoodRepository;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
@@ -16,6 +17,13 @@ public class NeighborhoodService {
 
     public List<Neighborhood> getAll(){
         return neighborhoodRepository.findAll();
+    }
+
+    public List<Neighborhood> getByCity(Integer id){
+        return neighborhoodRepository.findAll()
+                .stream().filter(neighborhood -> neighborhood
+                        .getIdCity().equals(id))
+                .collect(Collectors.toList());
     }
 
     public Optional<Neighborhood> find(Integer id){

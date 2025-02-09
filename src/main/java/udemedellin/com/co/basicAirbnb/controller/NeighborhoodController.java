@@ -20,6 +20,9 @@ public class NeighborhoodController {
         return neighborhoodService.getAll();
     }
 
+    @GetMapping("/byCity/{id}")
+    public List<Neighborhood> getByCity(@PathVariable Integer id){return  neighborhoodService.getByCity(id);}
+
     @GetMapping("/{id}")
     public Neighborhood get(@PathVariable Integer id){
         Optional<Neighborhood> neighborhood = neighborhoodService.find(id);
