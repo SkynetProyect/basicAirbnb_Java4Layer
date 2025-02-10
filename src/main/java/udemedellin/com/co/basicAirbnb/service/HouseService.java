@@ -33,6 +33,10 @@ public class HouseService {
         return houseRepository.save(house);
     }
 
+    public House saveImage(House house){
+        return houseRepository.save(house);
+    }
+
     public Boolean delete(Integer id){
         houseRepository.deleteById(id);
         return houseRepository.findById(id).isPresent();
