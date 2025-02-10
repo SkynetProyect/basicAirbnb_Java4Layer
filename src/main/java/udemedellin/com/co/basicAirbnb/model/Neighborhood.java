@@ -13,5 +13,6 @@ public class Neighborhood {
     private Integer id;
     private Integer idCity;
     private String name;
+    private String coords;
 
 }
