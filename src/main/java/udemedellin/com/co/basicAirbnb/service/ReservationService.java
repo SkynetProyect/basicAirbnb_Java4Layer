@@ -12,7 +12,6 @@ import java.util.Optional;
 @AllArgsConstructor
 public class ReservationService {
 
-
     private final ReservationRepository reservationRepository;
 
     public List<Reservation> getAll(){

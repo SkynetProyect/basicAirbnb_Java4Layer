@@ -8,7 +8,6 @@ import udemedellin.com.co.basicAirbnb.service.NeighborhoodService;
 import java.util.List;
 import java.util.Optional;
 
-
 @RestController
 @RequestMapping("/neighborhood")
 @AllArgsConstructor

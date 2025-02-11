@@ -5,13 +5,15 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="house")
-public class House {
+@Table(name="puntuacion")
+public class Puntuacion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Integer idNeighborhood;
-    private String address;
-    private float price;
-    private byte[] image = new byte[0];
+    private Integer idUsuario;
+    private Integer idHouse;
+    private Integer amount;
+
+
+
 }

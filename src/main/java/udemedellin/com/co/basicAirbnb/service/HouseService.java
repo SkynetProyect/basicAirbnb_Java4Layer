@@ -7,12 +7,10 @@ import udemedellin.com.co.basicAirbnb.repository.HouseRepository;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
 public class HouseService {
-
 
     private final HouseRepository houseRepository;
 
@@ -41,6 +39,5 @@ public class HouseService {
         houseRepository.deleteById(id);
         return houseRepository.findById(id).isPresent();
     }
-
 
 }

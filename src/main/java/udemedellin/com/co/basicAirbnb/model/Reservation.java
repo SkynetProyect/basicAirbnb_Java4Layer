@@ -12,7 +12,8 @@ public class Reservation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private Integer idHouse;
+    private Integer idUsuario;
     private Timestamp startDate;
     private Timestamp endDate;
-    private String userName;
+
 }
