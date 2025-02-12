@@ -27,6 +27,11 @@ public class UsuarioController {
         return usuario.orElseGet(Usuario::new);
     }
 
+    @PostMapping("/login")
+    public Usuario login(@RequestBody Usuario usuario){
+        return usuarioService.login(usuario);
+    }
+
     @PostMapping
     public Usuario create(@RequestBody Usuario usuario){
         return usuarioService.save(usuario);

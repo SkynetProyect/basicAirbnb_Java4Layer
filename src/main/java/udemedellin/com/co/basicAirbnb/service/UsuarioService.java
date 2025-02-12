@@ -27,6 +27,15 @@ public class UsuarioService {
         return usuarioRepository.save(usuario);
     }
 
+    public Usuario login(Usuario usuario){
+        System.out.println(usuario);
+        return usuarioRepository.findAll().stream()
+                .filter(usuario1 -> usuario1.getNombre().equals(usuario.getNombre())&&
+                        usuario1.getPass().equals(usuario.getPass())
+
+                ).findFirst().orElse(null);
+    }
+
     public Boolean delete(Integer id){
         usuarioRepository.deleteById(id);
         return usuarioRepository.findById(id).isPresent();
