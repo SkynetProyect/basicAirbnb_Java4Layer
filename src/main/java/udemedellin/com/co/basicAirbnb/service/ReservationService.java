@@ -18,6 +18,12 @@ public class ReservationService {
         return reservationRepository.findAll();
     }
 
+    public List<Reservation> getByUser(Integer iduser){
+        return reservationRepository.findAll().stream()
+                .filter(reservation -> reservation.getIdUsuario().equals(iduser))
+                .toList();
+    }
+
     public Optional<Reservation> find(Integer id){
         return reservationRepository.findById(id);
     }

@@ -26,6 +26,11 @@ public class ReservationController {
         return reservation.orElseGet(Reservation::new);
     }
 
+    @GetMapping("getByUser/{id}")
+    public List<Reservation> getByUser(@PathVariable Integer id) {
+        return reservationService.getByUser(id);
+    }
+
     @PostMapping
     public Reservation create(@RequestBody Reservation reservation) {
         return reservationService.save(reservation);
