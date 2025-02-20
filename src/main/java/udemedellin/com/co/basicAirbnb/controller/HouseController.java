@@ -16,12 +16,15 @@ public class HouseController {
 
     @GetMapping("/all")
     public List<House> getAll(){
+
         return houseService.getAll();
+
     }
 
     @GetMapping("/byNeighborhood/{id}")
     public List<House> getByNeighborhood(@PathVariable Integer id){
         return houseService.getByNeighborhood(id);
+
     }
 
     @GetMapping("/{id}")
@@ -33,11 +36,13 @@ public class HouseController {
     @PostMapping
     public House create(@RequestBody House house){
         return houseService.save(house);
+
     }
 
     @DeleteMapping("/{id}")
     public Boolean delete(@PathVariable Integer id){
         return houseService.delete(id);
+
     }
 
 

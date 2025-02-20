@@ -1,0 +1,7 @@
+class ClaseMedicionTiempo(){
+
+    public Integer medirTiempo(){
+
+        return tiempo
+    }
+}
